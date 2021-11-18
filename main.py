@@ -712,9 +712,8 @@ def main():
                   f'Please Reply All to this email so that I know you have seen it.\n\n' \
                   f'(CC Central Support on all tutor emails by always using REPLY ALL).\n\n' \
                   f'Sincerely,\n' \
-                  f'Nathan Barnes\n'
-        gmail_sender.Email(Receiver=event.invitee_email, Message=message, Subject=subject, Image=None,
-                           Cc='centraltutorsupport@bootcampspot.com')
+                  f'YOUR NAME\n'
+        gmail_sender.Email(Receiver=event.invitee_email, Message=message, Subject=subject, Image=None)
         print(f'{event.invitee} is receiving an email!')
         database.mark_as_notified(event)
 
